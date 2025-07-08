@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App 🍲</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <div class="theme-toggle">
+      <button id="themeBtn">🌞 Toggle Mode</button>
+    </div>
+
+    <div class="weather-card">
+      <h2>🍱 Sah Weather</h2>
+      <input type="text" id="cityInput" placeholder="Enter city (e.g. Delhi)" />
+      <button onclick="getWeather()">Check Weather</button>
+      <button onclick="getLocationWeather()">📍 Use My Location</button>
+
+      <div id="loader" class="loader">Loading...</div>
+
+      <div id="weatherInfo" class="info-section" style="display: none;">
+        <img id="weatherIcon" />
+        <h3 id="cityName"></h3>
+        <p><strong>🌡 Temp:</strong> <span id="temp"></span>°C</p>
+        <p><strong>📖 Condition:</strong> <span id="description"></span></p>
+        <p><strong>💨 Wind:</strong> <span id="wind"></span> kph</p>
+        <p><strong>💧 Humidity:</strong> <span id="humidity"></span>%</p>
+      </div>
+
+      <div id="forecast" class="forecast-section"></div>
+      <div id="error" class="error"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
